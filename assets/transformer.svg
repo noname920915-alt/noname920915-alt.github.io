@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 242"><defs><pattern id="g" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0v26" fill="none" stroke="#518ab933"/></pattern><linearGradient id="b"><stop stop-color="#0c1929"/><stop offset="1" stop-color="#163044"/></linearGradient></defs><rect width="620" height="242" fill="url(#b)"/><rect width="620" height="242" fill="url(#g)"/><g fill="none" stroke="#69a9e044"><path d="M0 53h108l32 32M620 211H520l-30-31M620 41h-58l-51 51M0 195h88l30-30"/><circle cx="108" cy="53" r="4"/><circle cx="520" cy="211" r="4"/></g><g color="#79eed9" fill="#defff8" font-family="Consolas,monospace" font-size="14" font-weight="700"><text x="310" y="47" text-anchor="middle" font-size="16" letter-spacing="2" fill="#b3f4e7">TRANSFORMER</text>
+  <g fill="#235065" stroke="#79eed9">
+    <rect x="94" y="82" width="29" height="20" rx="3"/><rect x="94" y="110" width="29" height="20" rx="3"/><rect x="94" y="138" width="29" height="20" rx="3"/>
+  </g>
+  <path d="M123 92h18l19 28m-37 0h37m-37 28h18l19-28M285 120h59m133 0h44M144 119V67h157v40m30 13v56h163v-43" fill="none" stroke="#79eed9" stroke-width="2"/>
+  <rect x="160" y="83" width="125" height="74" rx="6" fill="#17334a" stroke="#79eed9" stroke-width="2"/><text x="222.5" y="125" text-anchor="middle">ATTENTION</text><rect x="344" y="83" width="133" height="74" rx="6" fill="#17334a" stroke="#79eed9" stroke-width="2"/><text x="410.5" y="125" text-anchor="middle">FEED-FORWARD</text>
+  <circle cx="301" cy="120" r="12" fill="#102637" stroke="#79eed9" stroke-width="2"/><path d="M295 120h12m-6-6v12" stroke="#b3f4e7" stroke-width="1.5"/>
+  <circle cx="494" cy="120" r="12" fill="#102637" stroke="#79eed9" stroke-width="2"/><path d="M488 120h12m-6-6v12" stroke="#b3f4e7" stroke-width="1.5"/>
+  <path d="m515 115 7 5-7 5" fill="none" stroke="#79eed9" stroke-width="2"/>
+  <text x="109" y="189" font-size="11" fill="#9bbdd2" text-anchor="middle">TOKENS</text>
+  <text x="410" y="198" font-size="11" fill="#9bbdd2" text-anchor="middle">RESIDUAL CONNECTION</text></g></svg>
