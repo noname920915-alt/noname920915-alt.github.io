@@ -15,3 +15,71 @@
 @media(max-width:560px){.wrap{width:calc(100% - 32px)}.topbar .wrap{min-height:62px;gap:8px}.brand{gap:7px;font-size:13px}.mark{width:29px;height:29px;font-size:10px}.brand small,.nav .contact-nav{display:none}.nav{gap:10px;font-size:12px}.nav .outline{min-height:30px;font-size:11px;padding:.2rem .4rem}.hero-grid{grid-template-columns:1fr;padding-block:35px 29px;gap:27px}.hero h1{font-size:66px}.hero h2{margin-top:16px}.portrait{width:62%;max-width:240px;justify-self:start;margin:0}.trace{width:100%}.home-metrics{grid-template-columns:repeat(2,1fr)}.home-metrics a:nth-child(3){border-left:0;padding-left:0}.home-metrics a:nth-child(n+3){border-top:1px solid var(--line)}.home-metrics a{padding-top:15px;padding-bottom:15px}.library{padding-block:45px}.cards{grid-template-columns:1fr}.skills-strip .wrap,.detail-hero .wrap{grid-template-columns:1fr}.detail-hero .wrap{padding-block:30px}.detail-hero img{max-width:380px}.entry{grid-template-columns:30px 1fr;gap:9px;padding:26px 0}.entry-id{font-size:16px}.entry .metrics{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery img{height:150px}.bottom-nav{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 .gallery img.full-image{height:auto}
+
+.entry > div {
+  min-width: 0;
+}
+
+.entry .table-wrap {
+  margin: 20px 0 8px;
+  overflow-x: auto;
+}
+
+.entry table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.entry th,
+.entry td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  text-align: left;
+}
+
+.entry thead th {
+  color: var(--mint);
+  background: var(--surface);
+}
+
+.entry tbody th {
+  font-weight: 600;
+}
+
+.readable td,
+.readable tbody th {
+  font-weight: 400;
+}
+
+.readable tbody th {
+  color: var(--ink);
+  background: transparent;
+}
+
+.readable .gallery {
+  margin-bottom: 24px;
+}
+
+.viewer-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.viewer-actions .outline {
+  min-height: auto;
+  padding: .35rem .5rem;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.viewer header span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.viewer button {
+  white-space: nowrap;
+}
