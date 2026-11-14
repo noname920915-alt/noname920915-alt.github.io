@@ -1,0 +1,148 @@
+BloodMNIST 160-multiplier posedge-only RTL regression — 2026-11-14
+All 80 frames PASS; all 566400 intermediate values / signed logits match.
+RTL and original tb_simple were NOT modified before or during this rerun.
+RTL SHA256: 0A1C5F39D02283E53FAA458492052AEE74F13338B8C0A0B9F5BC6B0EBE326C0D
+TB SHA256: 38E04C6F58F80D56A67E6326F1392A6D873D2EC81F130301E98AA1385265C619
+INTERVAL: 4900 cycles; testbench clock: 10 ns (100 MHz).
+Scope: local extra hidden-case datasets, NOT unpublished official hidden tests.
+No new DC, N16 mapping, STA, SDF or area measurement was performed.
+Each frame: Conv1 4608; Pool1 1152; Conv2 1024; Pool2 256; FC1 32; signed logits 8.
+Original local source paths below are shortened to tb_simple.v.
+
+=== original ===
+WARNING: tb_simple.v:98: $readmemh(./tb/images.hex): Not enough words in the file for the requested range [0:37631].
+WARNING: tb_simple.v:99: $readmemh(./tb/pred.hex): Not enough words in the file for the requested range [0:15].
+img  0 : golden 0, got 0  PASS
+img  1 : golden 1, got 1  PASS
+img  2 : golden 2, got 2  PASS
+img  3 : golden 3, got 3  PASS
+img  4 : golden 4, got 4  PASS
+img  5 : golden 5, got 5  PASS
+img  6 : golden 6, got 6  PASS
+Layerwise PASS all 8 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img  7 : golden 7, got 7  PASS
+
+8 / 8 PASS
+throughput : 20172.475 FPS  (8 images in 39658 cycles)
+
+tb_simple.v:164: $finish called at 521900000 (1ps)
+
+
+=== shuffled ===
+WARNING: tb_simple.v:98: $readmemh(./tb/images.hex): Not enough words in the file for the requested range [0:37631].
+WARNING: tb_simple.v:99: $readmemh(./tb/pred.hex): Not enough words in the file for the requested range [0:15].
+img  0 : golden 5, got 5  PASS
+img  1 : golden 7, got 7  PASS
+img  2 : golden 2, got 2  PASS
+img  3 : golden 4, got 4  PASS
+img  4 : golden 6, got 6  PASS
+img  5 : golden 0, got 0  PASS
+img  6 : golden 3, got 3  PASS
+Layerwise PASS all 8 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img  7 : golden 1, got 1  PASS
+
+8 / 8 PASS
+throughput : 20172.475 FPS  (8 images in 39658 cycles)
+
+tb_simple.v:164: $finish called at 521900000 (1ps)
+
+
+=== random ===
+img  0 : golden 3, got 3  PASS
+img  1 : golden 5, got 5  PASS
+img  2 : golden 7, got 7  PASS
+img  3 : golden 3, got 3  PASS
+img  4 : golden 0, got 0  PASS
+img  5 : golden 1, got 1  PASS
+img  6 : golden 0, got 0  PASS
+img  7 : golden 0, got 0  PASS
+img  8 : golden 6, got 6  PASS
+img  9 : golden 7, got 7  PASS
+img 10 : golden 6, got 6  PASS
+img 11 : golden 3, got 3  PASS
+img 12 : golden 2, got 2  PASS
+img 13 : golden 6, got 6  PASS
+img 14 : golden 4, got 4  PASS
+Layerwise PASS all 16 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img 15 : golden 6, got 6  PASS
+
+16 / 16 PASS
+throughput : 20289.635 FPS  (16 images in 78858 cycles)
+
+tb_simple.v:164: $finish called at 913900000 (1ps)
+
+
+=== negative_tie ===
+img  0 : golden 0, got 0  PASS
+img  1 : golden 0, got 0  PASS
+img  2 : golden 0, got 0  PASS
+img  3 : golden 0, got 0  PASS
+img  4 : golden 0, got 0  PASS
+img  5 : golden 0, got 0  PASS
+img  6 : golden 0, got 0  PASS
+img  7 : golden 0, got 0  PASS
+img  8 : golden 0, got 0  PASS
+img  9 : golden 0, got 0  PASS
+img 10 : golden 0, got 0  PASS
+img 11 : golden 0, got 0  PASS
+img 12 : golden 0, got 0  PASS
+img 13 : golden 0, got 0  PASS
+img 14 : golden 0, got 0  PASS
+Layerwise PASS all 16 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img 15 : golden 0, got 0  PASS
+
+16 / 16 PASS
+throughput : 20289.635 FPS  (16 images in 78858 cycles)
+
+tb_simple.v:164: $finish called at 913900000 (1ps)
+
+
+=== signed_bias ===
+img  0 : golden 1, got 1  PASS
+img  1 : golden 1, got 1  PASS
+img  2 : golden 1, got 1  PASS
+img  3 : golden 1, got 1  PASS
+img  4 : golden 1, got 1  PASS
+img  5 : golden 1, got 1  PASS
+img  6 : golden 1, got 1  PASS
+img  7 : golden 1, got 1  PASS
+img  8 : golden 1, got 1  PASS
+img  9 : golden 1, got 1  PASS
+img 10 : golden 1, got 1  PASS
+img 11 : golden 1, got 1  PASS
+img 12 : golden 1, got 1  PASS
+img 13 : golden 1, got 1  PASS
+img 14 : golden 1, got 1  PASS
+Layerwise PASS all 16 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img 15 : golden 1, got 1  PASS
+
+16 / 16 PASS
+throughput : 20289.635 FPS  (16 images in 78858 cycles)
+
+tb_simple.v:164: $finish called at 913900000 (1ps)
+
+
+=== overflow ===
+img  0 : golden 1, got 1  PASS
+img  1 : golden 0, got 0  PASS
+img  2 : golden 1, got 1  PASS
+img  3 : golden 0, got 0  PASS
+img  4 : golden 0, got 0  PASS
+img  5 : golden 0, got 0  PASS
+img  6 : golden 4, got 4  PASS
+img  7 : golden 1, got 1  PASS
+img  8 : golden 0, got 0  PASS
+img  9 : golden 0, got 0  PASS
+img 10 : golden 4, got 4  PASS
+img 11 : golden 0, got 0  PASS
+img 12 : golden 4, got 4  PASS
+img 13 : golden 4, got 4  PASS
+img 14 : golden 0, got 0  PASS
+Layerwise PASS all 16 frames, per frame 4608 conv1, 1152 pool1, 1024 conv2, 256 pool2, 32 fc1 and 8 signed logits
+img 15 : golden 0, got 0  PASS
+
+16 / 16 PASS
+throughput : 20289.635 FPS  (16 images in 78858 cycles)
+
+tb_simple.v:164: $finish called at 913900000 (1ps)
+
