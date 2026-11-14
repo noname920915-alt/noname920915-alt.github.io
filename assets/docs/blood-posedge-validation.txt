@@ -1,6 +1,6 @@
-BloodMNIST 160-multiplier posedge-only RTL regression — 2026-11-14
+BloodMNIST 160-multiplier posedge-only RTL validation
 All 80 frames PASS; all 566400 intermediate values / signed logits match.
-RTL and original tb_simple were NOT modified before or during this rerun.
+RTL and the original tb_simple retained the same SHA256 values throughout validation.
 RTL SHA256: 0A1C5F39D02283E53FAA458492052AEE74F13338B8C0A0B9F5BC6B0EBE326C0D
 TB SHA256: 38E04C6F58F80D56A67E6326F1392A6D873D2EC81F130301E98AA1385265C619
 INTERVAL: 4900 cycles; testbench clock: 10 ns (100 MHz).
